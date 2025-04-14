@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool startGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StartGame()
+    {
+        startGame = true;
+    }
+
+    public void ResetGame()
+    {
+        startGame=false;
     }
 }
