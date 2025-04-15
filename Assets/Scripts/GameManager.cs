@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject target;
     public int count;
     public GameObject title;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +38,18 @@ public class GameManager : MonoBehaviour
     {
         startGame = true;
         title.SetActive(false);
+        Player.SetActive(true);
     }
 
     public void ResetGame()
     {
         startGame=false;
+    }
+
+    public void GameOver()
+    {
+        startGame = false;
+        title.SetActive(true);
+        count = 0;
     }
 }
