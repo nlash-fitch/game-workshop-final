@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
-    public int speed = 5;
+    public int speed;
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.down*Time.deltaTime*speed);
+        rb.AddForce(Vector3.right*Input.GetAxis("Horizontal")*speed*Time.deltaTime);
     }
 }
