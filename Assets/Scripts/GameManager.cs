@@ -51,5 +51,8 @@ public class GameManager : MonoBehaviour
         startGame = false;
         title.SetActive(true);
         count = 0;
+        Player.SetActive(false);
+        Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+        Player.transform.position = new Vector3(0, -4.5f, 0);
     }
 }

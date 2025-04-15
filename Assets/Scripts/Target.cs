@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public int speed = 5;
+    public GameObject me;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,8 @@ public class Target : MonoBehaviour
         this.transform.Translate(Vector3.down*Time.deltaTime*speed);
     }
 
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this);
+        Destroy(me);
     }
 }
