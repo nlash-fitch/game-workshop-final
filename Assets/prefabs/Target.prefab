@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6949189117970401284}
   - component: {fileID: 782049438618853148}
   - component: {fileID: 5669486410322286741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   me: {fileID: 2691538787292038943}
+  manager: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!50 &5669486410322286741
 Rigidbody2D:
   serializedVersion: 4
@@ -174,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7791268646321884817}
   - component: {fileID: 2908528837861418801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
