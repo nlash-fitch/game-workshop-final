@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int count;
     public GameObject title;
     public GameObject Player;
+    public TextMeshProUGUI score;
+    public int numScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +42,13 @@ public class GameManager : MonoBehaviour
         startGame = true;
         title.SetActive(false);
         Player.SetActive(true);
+        score.text = "Score: " + numScore;
     }
 
     public void ResetGame()
     {
         startGame=false;
+        numScore = 0;
     }
 
     public void GameOver()
