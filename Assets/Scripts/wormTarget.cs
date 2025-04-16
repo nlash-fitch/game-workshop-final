@@ -24,7 +24,7 @@ public class wormTarget : MonoBehaviour
     void Update()
     {
         if(distance < maxDistance) {
-            distance -= Vector3.down.y * Time.deltaTime * speed;
+            distance -= Vector3.down.y * Time.deltaTime * speed * 2;
             this.transform.Translate(Vector3.down * Time.deltaTime * speed);
         } else if(dir>0 && dir<3) {
             this.transform.Rotate(new Vector3(0,0,90));
