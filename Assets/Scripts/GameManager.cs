@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         startGame=false;
         numScore = 0;
+        score.text = "Score: " + numScore;
     }
 
     public void GameOver()
@@ -59,5 +60,12 @@ public class GameManager : MonoBehaviour
         Player.SetActive(false);
         Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         Player.transform.position = new Vector3(0, -4.5f, 0);
+        Player.transform.rotation = Quaternion.identity;
+    }
+
+    public void plusScore(int toAdd)
+    {
+        numScore += toAdd;
+        score.text = "Score: " + numScore;
     }
 }

@@ -48,5 +48,8 @@ public class wormTarget : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(me);
+        if (other.tag == "projectile") {
+            gameManager.plusScore(10);
+        }
     }
 }

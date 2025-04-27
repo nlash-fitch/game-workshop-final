@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
     public int speed = 5;
     public GameObject me;
@@ -18,17 +18,9 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.down*Time.deltaTime*speed);
+        this.transform.Translate(Vector3.up * Time.deltaTime * speed);
         if (!gameManager.startGame) {
             Destroy(me);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Destroy(me);
-        if (other.tag == "projectile") {
-            gameManager.plusScore(5);
         }
     }
 }

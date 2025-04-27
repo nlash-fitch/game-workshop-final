@@ -19,6 +19,8 @@ public class KillBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Manager.GameOver();
+        if(other.tag== "Enemy") {
+            Manager.GameOver();
+        }
     }
 }
