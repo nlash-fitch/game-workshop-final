@@ -49,7 +49,10 @@ public class wormTarget : MonoBehaviour
     {
         Destroy(me);
         if (other.tag == "projectile") {
-            gameManager.plusScore(10);
+            gameManager.plusScore(5);
+        }
+        if(other.tag =="kill box") {
+            gameManager.updateLife(1);
         }
     }
 }

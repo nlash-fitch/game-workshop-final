@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - projectile
+  - kill box
   layers:
   - Default
   - TransparentFX

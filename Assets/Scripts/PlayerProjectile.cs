@@ -22,5 +22,8 @@ public class PlayerProjectile : MonoBehaviour
         if (!gameManager.startGame) {
             Destroy(me);
         }
+        if(this.transform.position.x < -20 || this.transform.position.x > 20 || this.transform.position.y < -20 || this.transform.position.y > 20) {
+            Destroy(me);
+        }
     }
 }

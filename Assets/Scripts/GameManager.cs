@@ -15,6 +15,14 @@ public class GameManager : MonoBehaviour
     public int numScore;
 
     public AudioSource Audio;
+
+    public int oldScore;
+    public int life = 3;
+
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
+    public GameObject lifeP;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +53,10 @@ public class GameManager : MonoBehaviour
         title.SetActive(false);
         Player.SetActive(true);
         score.text = "Score: " + numScore;
+        lifeP.SetActive(false);
+        life3.SetActive(true);
+        life2.SetActive(true);
+        life1.SetActive(true);
     }
 
     public void ResetGame()
@@ -65,14 +77,74 @@ public class GameManager : MonoBehaviour
         Player.transform.position = new Vector3(0, -4.5f, 0);
         Player.transform.rotation = Quaternion.identity;
         numScore = 0;
+        oldScore = 0;
         score.text = "Score: " + numScore;
-        
+        life = 3;
+        spawnTime = 75;
     }
 
     public void plusScore(int toAdd)
     {
         numScore += toAdd;
         score.text = "Score: " + numScore;
-        //Audio.Play();
+        if (numScore-oldScore>=100) {
+            updateLife(-1);
+            oldScore = (numScore / 100) * 100;
+            if(oldScore == 100) {
+                spawnTime -= 10;
+            }
+            if(oldScore == 200) {
+                spawnTime -= 10;
+            }
+            if(oldScore == 300) {
+                spawnTime -= 5;
+            }
+            if(oldScore == 500) {
+                spawnTime -= 5;
+            }
+            if(oldScore == 700) {
+                spawnTime -= 5;
+            }
+        }
+    }
+
+    public void updateLife(int hurt)
+    {
+        life = life - hurt;
+
+
+        if (life > 3) {
+            lifeP.SetActive(true);
+            life3.SetActive(true);
+            life2.SetActive(true);
+            life1.SetActive(true);
+        }
+        if(life == 3) {
+            lifeP.SetActive(false);
+            life3.SetActive(true);
+            life2.SetActive(true);
+            life1.SetActive(true);
+        }
+        if (life == 2) {
+            lifeP.SetActive(false);
+            life3.SetActive(false);
+            life2.SetActive(true);
+            life1.SetActive(true);
+        }
+        if(life == 1) {
+            lifeP.SetActive(false);
+            life3.SetActive(false);
+            life2.SetActive(false);
+            life1.SetActive(true);
+        }
+        if (life <= 0) {
+            life = 0;
+            lifeP.SetActive(false);
+            life3.SetActive(false);
+            life2.SetActive(false);
+            life1.SetActive(false);
+            GameOver();
+        }
+
     }
 }

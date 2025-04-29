@@ -28,7 +28,10 @@ public class spearTarget : MonoBehaviour
     {
         Destroy(me);
         if (other.tag == "projectile") {
-            gameManager.plusScore(5);
+            gameManager.plusScore(10);
+        }
+        if (other.tag == "kill box") {
+            gameManager.updateLife(1);
         }
     }
 }

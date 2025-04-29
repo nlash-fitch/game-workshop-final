@@ -30,5 +30,8 @@ public class Target : MonoBehaviour
         if (other.tag == "projectile") {
             gameManager.plusScore(5);
         }
+        if (other.tag == "kill box") {
+            gameManager.updateLife(2);
+        }
     }
 }
