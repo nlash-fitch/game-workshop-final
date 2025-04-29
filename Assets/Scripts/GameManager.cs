@@ -71,6 +71,6 @@ public class GameManager : MonoBehaviour
     {
         numScore += toAdd;
         score.text = "Score: " + numScore;
-        Audio.Play();
+        //Audio.Play();
     }
 }
