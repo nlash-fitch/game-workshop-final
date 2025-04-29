@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         if (startGame) {
             if(count == spawnTime) {
-                Instantiate(target[Random.Range(0,2)], new Vector3(Random.Range(-8,8), 6, 0), Quaternion.identity);
+                Instantiate(target[Random.Range(0,3)], new Vector3(Random.Range(-8,7), 6, 0), Quaternion.identity);
                 count = 0;
             } else {
                 count++;
