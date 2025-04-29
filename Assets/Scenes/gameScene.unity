@@ -442,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   rb: {fileID: 425182085}
-  spin: 100
+  spin: 190
   PP: {fileID: 8209422984020687252, guid: a87f6b5cc47d7d248916885c171773b8, type: 3}
   cooldown: 0
   timer: 20

@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
         Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         Player.transform.position = new Vector3(0, -4.5f, 0);
         Player.transform.rotation = Quaternion.identity;
+        numScore = 0;
+        score.text = "Score: " + numScore;
     }
 
     public void plusScore(int toAdd)
