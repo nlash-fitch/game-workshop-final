@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public TextMeshProUGUI score;
     public int numScore;
+
+    public AudioSource Audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +69,6 @@ public class GameManager : MonoBehaviour
     {
         numScore += toAdd;
         score.text = "Score: " + numScore;
+        Audio.Play();
     }
 }
