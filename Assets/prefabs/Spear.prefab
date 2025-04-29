@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4745631859338597883}
   - component: {fileID: 8563617663414797968}
   - component: {fileID: 839121454783900806}
+  - component: {fileID: 8242378234791378577}
   m_Layer: 7
   m_Name: Spear
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0, g: 0.5264101, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -101,7 +102,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -130,9 +131,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: -0.0063266754, y: -0.55496407}
+      - {x: -0.49367332, y: 0.2743318}
+      - {x: 0.5, y: 0.2743318}
   m_UseDelaunayMesh: 0
 --- !u!114 &839121454783900806
 MonoBehaviour:
@@ -150,3 +151,30 @@ MonoBehaviour:
   me: {fileID: 5842697031135431981}
   manager: {fileID: 0}
   gameManager: {fileID: 0}
+--- !u!50 &8242378234791378577
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842697031135431981}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

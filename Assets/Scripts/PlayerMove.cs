@@ -71,4 +71,13 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
+    public void GameOver()
+    {
+        ammo = 5;
+        ammoC1.SetActive(true);
+        ammoC2.SetActive(true);
+        ammoC3.SetActive(true);
+        ammoC4.SetActive(true);
+        ammoC5.SetActive(true);
+    }
 }
